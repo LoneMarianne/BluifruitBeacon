@@ -39,11 +39,11 @@ function refreshDeviceList(){
 
 function onDiscoverDevice(device){
 	//Make a list in html and show devises
-	
+	/*
 		var listItem = document.createElement('li'),
 		html = device.name+ "," + device.id;
 		listItem.innerHTML = html;
-		document.getElementById("bleDeviceList").appendChild(listItem);
+		document.getElementById("bleDeviceList").appendChild(listItem);*/
 		if(device.name == 'TESTLONE')
 			test();
 		//openBrowser('https://placering.000webhostapp.com');
@@ -64,4 +64,6 @@ function openBrowser(url) {
 }
 
 
-
+function onError(reason)  {
+	alert("ERROR: " + reason); // real apps should use notification.alert
+}
