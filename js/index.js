@@ -67,7 +67,7 @@ function onDiscoverDevice(device){
 }
 
 
-unction conn(){
+function conn(){
 	var  deviceTouch= event.srcElement.innerHTML;
 	document.getElementById("debugDiv").innerHTML =""; // empty debugDiv
 	var deviceTouchArr = deviceTouch.split(",");
