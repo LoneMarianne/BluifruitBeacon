@@ -29,7 +29,7 @@ var blue ={
     rxCharacteristic: '6e400003-b5a3-f393-e0a9-e50e24dcca9e'  // receive is from the phone's perspective
 }
 
-var ConnDeviceId;
+var WebDeviceId;
 var deviceList =[];
  
 function onLoad(){
@@ -65,13 +65,15 @@ function onDiscoverDevice(device){
 }
 
 
-function conn(){
+function openWeb(){
 	var  deviceTouch= event.srcElement.innerHTML;
-	document.getElementById("debugDiv").innerHTML =""; // empty debugDiv
+	//document.getElementById("debugDiv").innerHTML =""; // empty debugDiv
 	var deviceTouchArr = deviceTouch.split(",");
-	ConnDeviceId = deviceTouchArr[1];
+	WebDeviceId = deviceTouchArr[1];
 	//document.getElementById("debugDiv").innerHTML += "<br>"+deviceTouchArr[0]+"<br>"+deviceTouchArr[1]; //for debug:
-	ble.connect(ConnDeviceId, onConnect, onConnError);
+	
+	//ble.connect(WebDeviceId, onConnect, onConnError);
+	test();
  }
  
  //succes
