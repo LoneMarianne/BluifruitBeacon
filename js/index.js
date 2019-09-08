@@ -39,12 +39,14 @@ function refreshDeviceList(){
 
 function onDiscoverDevice(device){
 	//Make a list in html and show devises
-	 if(device.name =="TESTLONE"){
+	
 		var listItem = document.createElement('li'),
 		html = device.name+ "," + device.id;
 		listItem.innerHTML = html;
 		document.getElementById("bleDeviceList").appendChild(listItem);
-		openBrowser('https://placering.000webhostapp.com');
+		if(device.name == 'TESTLONE')
+			test();
+		//openBrowser('https://placering.000webhostapp.com');
 	 }
 }
 
