@@ -1,18 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget 
-	id="dk.kea.bluefruit-2" 
+	id="dk.kea.bluefruitBeacon" 
 	version="0.0.1" 
 	xmlns="http://www.w3.org/ns/widgets" 
 	xmlns:cdv="http://cordova.apache.org/ns/1.0">
 
-    <name>Bluifruit-2</name>
+    <name>BluifruitBeacon</name>
     <description>
         A sample app from a phone  BLE hardware.
     </description>
     <author >
          Lone Østerlund based on an example by Don Coleman: 
 		 https://github.com/don/cordova-plugin-ble-central 
-		 revideret til IoS af Rico Ghanem
+
     </author>
 
     <content src="index.html" />
