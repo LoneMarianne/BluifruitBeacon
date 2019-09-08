@@ -29,7 +29,8 @@ var blue ={
     rxCharacteristic: '6e400003-b5a3-f393-e0a9-e50e24dcca9e'  // receive is from the phone's perspective
 }
 
-var WebDeviceId;
+var ConnDeviceId;
+var bleDeviceName;
 var deviceList =[];
  
 function onLoad(){
@@ -57,6 +58,7 @@ function refreshDeviceList(){
 function onDiscoverDevice(device){
 	//Make a list in html and show devises
 	if(device.name == "TESTLONE"){
+		
 		var listItem = document.createElement('li'),
 		html = device.name+ "," + device.id;
 		listItem.innerHTML = html;
@@ -65,15 +67,17 @@ function onDiscoverDevice(device){
 }
 
 
-function openWeb(){
+unction conn(){
 	var  deviceTouch= event.srcElement.innerHTML;
-	//document.getElementById("debugDiv").innerHTML =""; // empty debugDiv
+	document.getElementById("debugDiv").innerHTML =""; // empty debugDiv
 	var deviceTouchArr = deviceTouch.split(",");
-	WebDeviceId = deviceTouchArr[1];
-	//document.getElementById("debugDiv").innerHTML += "<br>"+deviceTouchArr[0]+"<br>"+deviceTouchArr[1]; //for debug:
-	
-	//ble.connect(WebDeviceId, onConnect, onConnError);
-	test();
+	ConnDeviceId = deviceTouchArr[1];
+	bleDeviceName = deviceTouchArr[0];
+	document.getElementById("debugDiv").innerHTML += "<br>"+deviceTouchArr[0]+"<br>"+deviceTouchArr[1]; //for debug:
+	if(bleDeviceName  == "TESTLONE")
+		test();
+	//ble.connect(ConnDeviceId, onConnect, onConnError);
+ 
  }
  
  //succes
