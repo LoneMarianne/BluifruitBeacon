@@ -32,6 +32,8 @@ var blue ={
 var ConnDeviceId;
 var bleDeviceName;
 var deviceList =[];
+
+setTimeout("window.location.reload();",10000);
  
 function onLoad(){
 	document.addEventListener('deviceready', onDeviceReady, false);
