@@ -16,11 +16,7 @@ function stringToBytes(string) {
     return array.buffer;
 }
 
-// this is ble hm-10 UART service
-/*var blue= {
-    serviceUUID: "0000FFE0-0000-1000-8000-00805F9B34FB",
-    characteristicUUID: "0000FFE1-0000-1000-8000-00805F9B34FB"
-};*/
+
 
 //the bluefruit UART Service
 var blue ={
@@ -33,7 +29,7 @@ var ConnDeviceId;
 var bleDeviceName;
 var deviceList =[];
 
-setTimeout("window.location.reload();",10000);
+setTimeout("window.location.reload();",20000); //reload siden hvert 20. sekund. Dermed genindlæses Bluetooth-liste
  
 function onLoad(){
 	document.addEventListener('deviceready', onDeviceReady, false);
@@ -78,50 +74,9 @@ function conn(){
 	document.getElementById("debugDiv").innerHTML += "<br>Debug: <br>"+deviceTouchArr[0]+"<br>"+deviceTouchArr[1]; //for debug:
 	if(bleDeviceName  == "TESTLONE")
 		test();
-	//ble.connect(ConnDeviceId, onConnect, onConnError);
- 
  }
  
- /*
- 
- //succes
-function onConnect(){
-	document.getElementById("statusDiv").innerHTML = " Status: Connected";
-	document.getElementById("bleId").innerHTML = ConnDeviceId;
-	ble.startNotification(ConnDeviceId, blue.serviceUUID, blue.rxCharacteristic, onData, onError);
-}
 
-//failure
-function onConnError(){
-	alert("Problem connecting");
-	document.getElementById("statusDiv").innerHTML = " Status: Disonnected";
-}
-
- function onData(data){ // data received from Arduino
-	document.getElementById("receiveDiv").innerHTML =  "Received: " + bytesToString(data) + "<br/>";
-}
-
-function data(txt){
-	messageInput.value = txt;
-}	
-
-function sendData() { // send data to Arduino
-	 var data = stringToBytes(messageInput.value);
-	ble.writeWithoutResponse(ConnDeviceId, blue.serviceUUID, blue.txCharacteristic, data, onSend, onError);
-}
-	
-function onSend(){
-	document.getElementById("sendDiv").innerHTML = "Sent: " + messageInput.value + "<br/>";
-}
-
-function disconnect() {
-	ble.disconnect(deviceId, onDisconnect, onError);
-}
-
-function onDisconnect(){
-	document.getElementById("statusDiv").innerHTML = "Status: Disconnected";
-}
-*/
 function onError(reason)  {
 	alert("ERROR: " + reason); // real apps should use notification.alert
 }
@@ -129,8 +84,7 @@ function onError(reason)  {
 
 
 function test(){
-	var url='https://placering.000webhostapp.com';
-	
+	var url='https://placering.000webhostapp.com';	
 	openBrowser(url);
 }
 
