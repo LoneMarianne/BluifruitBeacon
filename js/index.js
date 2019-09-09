@@ -73,12 +73,14 @@ function conn(){
 	var deviceTouchArr = deviceTouch.split(",");
 	ConnDeviceId = deviceTouchArr[1];
 	bleDeviceName = deviceTouchArr[0];
-	document.getElementById("debugDiv").innerHTML += "<br>"+deviceTouchArr[0]+"<br>"+deviceTouchArr[1]; //for debug:
+	document.getElementById("debugDiv").innerHTML += "<br>Debug: <br>"+deviceTouchArr[0]+"<br>"+deviceTouchArr[1]; //for debug:
 	if(bleDeviceName  == "TESTLONE")
 		test();
 	//ble.connect(ConnDeviceId, onConnect, onConnError);
  
  }
+ 
+ /*
  
  //succes
 function onConnect(){
@@ -117,9 +119,12 @@ function disconnect() {
 function onDisconnect(){
 	document.getElementById("statusDiv").innerHTML = "Status: Disconnected";
 }
+*/
 function onError(reason)  {
 	alert("ERROR: " + reason); // real apps should use notification.alert
 }
+
+
 
 function test(){
 	var url='https://placering.000webhostapp.com';
