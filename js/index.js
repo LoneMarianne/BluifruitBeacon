@@ -55,7 +55,7 @@ function refreshDeviceList(){
 
 function onDiscoverDevice(device){
 	//Make a list in html and show devises
-	if(device.name == "TESTLONE"){
+	if(device.name == "STATUE"){
 		
 		var listItem = document.createElement('li'),
 		html = device.name+ "," + device.id;
@@ -89,10 +89,11 @@ function test(){
 }
 
 function openBrowser(url) {
-   //var url = 'https://cordova.apache.org';
    var target = '_blank';
    var options = "location=no"
    var ref = cordova.InAppBrowser.open(url, target, options);
 }
+
+
 
 
