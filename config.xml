@@ -27,7 +27,7 @@
     <engine name="ios" spec="^4.5.3" />
 
 	
-	<preference name="phonegap-version" value="cli-6.5.0" />
+	<preference name="phonegap-version" value="cli-9.0.0" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
