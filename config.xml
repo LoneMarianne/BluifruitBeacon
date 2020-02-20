@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="dk.kea.bluefruitBeacon" version="0.0.1" 
+<widget id="dk.kea.bluefruitBeacon1" version="0.0.1" 
 		xmlns="http://www.w3.org/ns/widgets" 
 		xmlns:cdv="http://cordova.apache.org/ns/1.0">
 
-    <name>Test Beacon</name>
+    <name>Test Beacon1</name>
     <description>
         A sample app from a phone  BLE hardware.
     </description>
