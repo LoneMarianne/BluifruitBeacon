@@ -56,15 +56,17 @@ function refreshDeviceList(){
 function onDiscoverDevice(device){
 	//Make a list in html and show devises
 	if(device.name == "STATUE"){
-		
+		/*
 		var listItem = document.createElement('li'),
 		html = device.name+ "," + device.id;
 		listItem.innerHTML = html;
 		document.getElementById("bleDeviceList").appendChild(listItem);
+		*/
+		test()
 	}
 }
 
-
+/*
 function conn(){
 	var  deviceTouch= event.srcElement.innerHTML;
 	document.getElementById("debugDiv").innerHTML =""; // empty debugDiv
@@ -76,7 +78,7 @@ function conn(){
 		test();
  }
  
-
+*/
 function onError(reason)  {
 	alert("ERROR: " + reason); // real apps should use notification.alert
 }
